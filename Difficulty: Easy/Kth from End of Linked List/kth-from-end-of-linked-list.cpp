@@ -15,15 +15,11 @@ class Solution {
         // code here
         Node* fast = head;
         Node* slow = head;
-
-        // fast ko k nodes aage le jao
         for(int i = 0; i < k; i++) {
             if(fast == NULL)
                 return -1;
             fast = fast->next;
         }
-
-        // dono ko saath move karo
         while(fast != NULL) {
             slow = slow->next;
             fast = fast->next;

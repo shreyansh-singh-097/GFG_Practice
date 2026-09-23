@@ -14,10 +14,8 @@ class Node {
 class Solution {
 public:
     vector<int> ans;
-
     void solve(Node* root) {
-        if(root == NULL)
-            return;
+        if(root == NULL) return;
         solve(root->left);
         ans.push_back(root->data);
         solve(root->right);
